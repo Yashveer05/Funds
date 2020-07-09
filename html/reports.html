@@ -1,24 +1,100 @@
 <html>
+
 <head>
-<title>Reports Page</title>
+  <title>Reports Page</title>
 </head>
 <style>
-	body {
-	  background-image: url('r1.jpg');
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;
-	  background-size:100% 100%;
-	}
-	</style>
-<body>
-<center>
-<h2>Reports</h2>
+  body {
+    background-image: url('d4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  table{ 
+border-collapse:separate; 
+border-spacing: 0 15px;
+margin: 20px;
+ 
+} 
+th{ 
+background-color: #66063e; 
+color: #FFFFFF; 
+} 
+th,td{ 
+width: 150px; 
+text-align: center; 
+border: 1px solid #000000fd; 
+padding: 5px;
+}
 
-	<br>
-    <label for="text"><b>Phone Number</b></label>
-    <input type="text" placeholder="Enter Phone Number" name="Phone Number" required>
-	</br>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="/Rdetails">get reports</a>
-</center>
+</style>
+
+<body>
+  <center>
+    <h2>Reports</h2>
+    <form style="margin-left:20%; margin-right: 20%;margin-top: 2%;margin-bottom: 3%;"></form>
+      <label for="Phone">Phone Number:</label>
+      <input type="Phone" name="number" id="Phone" name="Phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type ="Submit" class="btn btn-primary"  onclick="getUser()">
+
+    </form>
+
+    <table id="reportarea" border="2">
+      
+    </table>
+  </center>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
+
+<script>
+  function getUser() {
+    var number = document.getElementById("Phone").value
+    if (!number || number === "") {
+      alert("please provide number")
+      return
+    }
+    reportTable = document.getElementById("reportarea")
+    $.ajax({
+      url: "http://localhost:5000/donations",
+      type: "GET",
+      dataType: "json",
+      data: {
+        phone: number
+      },
+      success: function (data, textStatus, jqXHR) {
+        console.log("success")
+        console.log(data)
+        if (data) {
+          html = `<tr>
+              <th> <b> Id </b></th>
+              <th> Phone </th>
+              <th>Address</th>
+              <th>Cloth count</th>
+              <th>Date</th>
+              
+            </tr>`
+          for (var i = 0; i < data.length; i++) {
+
+            html += `<tr>
+              <td> `   +   data[i]._id            +    `</td>
+              <td> `  +        data[i].phone           +   `</td>
+              <td> `  +        data[i].address         +   `</td>
+              <td> `  +        data[i].numberOfCloths  +  `</td>
+              <td> `  +        data[i].date            +   `</td>
+              
+              </tr>`
+          }
+          reportTable.innerHTML =html
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("error", errorThrown)
+
+      }
+    });
+  }
+</script>

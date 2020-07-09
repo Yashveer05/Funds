@@ -1,84 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"style="margin-left:20%; margin-right: 20%;margin-top: 2%;">
+       
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="login">Login <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="Shopping">Shoping <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="login">Donation <span class="sr-only">(current)</span></a>
+              </li>
+                        
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
 
-<style>
-body {
-  background-image: url('b.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:100% 100%;
-}
-</style>
-<body >
-<form action="sus.html">
-<br/>
-<h2>User Registration Page</h2>
-<table align="center" cellspacing="4">
-<tr>
-<td>Username</td><td>:</td>
-<td><input type="text" width="30"></td></tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input type="password" width="30"></td></tr>
-<tr>
-<td>Emailid</td>
-<td>:</td>
-<td><input type="text" width="30"></td></tr>
-<tr>
-<td>PhoneNo</td>
-<td>:</td>
-<td><input type="text" width="30"></td></tr>
-<tr>
-<td>Gender</td>
-<td>:</td>
-<td><input type="radio" value="male">male</input>
-<input type="radio" value="f">female</td></tr>
-<tr>
-<td>Date Of Birth</td>
-<td>:</td>
-<td><select>
-<option name="DD">DD</option>
-<option name="DD">1</option>
-<option name="DD">17</option>
-<option name="DD">16</option>
-<option name="DD">15</option>
-</select>
-<select>
-<option name="MM">MM</option>
-<option name="MM">January</option>
-<option name="MM">February</option>
-<option name="MM">April</option>
-<option name="MM">May</option>
-</select>
-<select>
-<option name="YY">YY</option>
-<option name="YY">2013</option>
-<option name="YY">2014</option>
-<option name="YY">1997</option>
-<option name="YY">1998</option>
-</select>
-</td></tr>
-<br/>
-<tr>
-<td>Languages Known</td>
-<td>:</td>
-<td>
-<select>
-<option name="Telugu">Telugu</option>
-<option name="Hindi">Hindi</option>
-<option name="English">English</option>
-</select>
-</td></tr>
-<br/>
-<tr>
-<td>Adress</td>
-<td>:</td>
-<td><textarea rows=4 cols=22></textarea></td></tr>
-<tr><td> </td>
-<td> </td>
-<td><input type="submit"  value="submit">
-&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;<input type="Reset" value="Reset"></td></tr>
-</table>
-</form>
-</body>
+       <form style="margin-left:30%; margin-right: 30%;margin-top: 5%;margin-bottom:10;">
+       <!-- <div class="container"> -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">User name</label>
+          <input type="text" class="form-control" id="inputUserName" >
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address </label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Contact number </label>
+            <input type="text" class="form-control" id="inputContact" placeholder="Phone number">
+          </div>
+          <button  class="btn btn-primary"><a onclick="addUser()"></a>Sign in</button>        
+      </form>
+
+      <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 </html>
+
+<script>
+function addUser(){
+  console.log("Working")
+  var email = document.getElementById("inputEmail").value
+  var pass = document.getElementById("inputPassword").value
+  var user = document.getElementById("inputUserName").value
+  var Add = document.getElementById("inputAddress").value
+  var phone = document.getElementById("inputContact").value
+  body=  {
+    "email": email,
+    "password": pass,
+    "address":Add,
+    "name":user,
+    "phone":phone
+  }
+  console.log(body)
+
+  $.ajax({
+    url : "http://localhost:5000/addUser",
+    type: "POST",
+    dataType: "json",
+    data : body,
+    success: function(data, textStatus, jqXHR)
+    {
+      console.log("success")
+        //data - response from server
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+      console.log("error",errorThrown)
+ 
+    }
+});
+}
+</script>

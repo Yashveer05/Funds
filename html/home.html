@@ -1,9 +1,92 @@
-<html>
+<!DOCTYPE html>
 <head>
-<title> online book store</title>
+<title> Funds </title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<iframe src="./topframe.html"width = "100%" height = "100%">
 
+<body>
+<center>
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light"style="margin-left:20%; margin-right: 20%;margin-top: 1%;">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="/AdminL">Admin Login<span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item active">
+             <a class="nav-link" href="/login">User Login <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item active">
+          <a class="nav-link" href="/registration">Sign up <span class="sr-only">(current)</span></a>
+         </li>
+       </ul>
+     
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         </form>
+     
+      </div>
+  </nav>
+  
+<!-- Slide Show -->
+  <section style="margin-left:20%; margin-right: 20%;margin-top: 5%;">
+    <img class="mySlides" src="imagess.jpg"style="width:80%">
+    <img class="mySlides" src="cardboard.jpg"style="width:80%">
+    <img class="mySlides" src="DONATION.jpg"style="width:80%">
+  </section>
+  
+  <!-- Band Description -->
+  <section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">Funds For Social welfare trust</h2>
+    <p class="w3-opacity"><i>We love Donations</i></p>
+    <p class="w3-justify"> Our idea is to design a system that will enable people to donate clothes that can either be donated further to needful people to use or sent for recycling. From the clothes that’ll be segregated for recycling bags of different types will be made. The account of all the data regarding the number of clothes that were collected from the donations, number of the onessent for reuse and the remaining sent for recycling, the number of bags and their costs and other data related to the delivery, reports, etc will be maintained using a database. The bags made from recycling clothes will then be made available for selling on the site. The money generated from these transactions will be provided as funds to various social welfare Organizations.</p>
+  </section>
+  <!-- Team Members -->
+  <section class="w3-row-padding w3-center w3-light-grey">
+    <article class="w3-third">
+      <p><b>Team Members</b></p>
+      <img src="Yashveer.jpg" alt="Random Name" style="width:10%">
+      <p>Yashveer</p>
+    </article>
+    <article class="w3-third">
+      
+      <img src="Anurup.jpeg" alt="Random Name" style="width:10%">
+      <p>Anurup</p>
+    </article>
+</section>
+    <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+      <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
+      <a href="https://in.pinterest.com/"><i class="fa fa-pinterest-p"></i></a>
+      <a href="https://twitter.com/login/"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+      <p class="w3-medium">
+      Powered by <a href="https://vit.ac.in/" target="_blank">Donation.now</a>
+      </p>
+    </footer>
+   
+    </center>  
+  <script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    </script>
 
+</body>
 </html>

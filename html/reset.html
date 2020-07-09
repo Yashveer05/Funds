@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title> Top frame</title>
+</head>
+  <style>
+    body {
+      background-image: url('r1.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size:100% 100%;
+    }
+ </style>
+  <body>
+    <center>
+        <h1>Change Password</h1>
+
+     <form method="post" >
+        <div class="container">          
+            <label for="username">  Username: </label>     
+            <input type="text" id="username" name="username" required >
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+       </div>  
+       <div class="container">
+           <label for="newPassword"> New Password: </label>
+           <input type="password" id="newPassword" name="newPassword" minlength="8" required >
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+        </div>
+        <div class="container">
+           <label for="confirm Password">Confirm Password:</label>
+           <input type="text" id="confirmPassword" name="confirmPassword" minlength="8" required  >
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+        </div>  
+        <div class="container">
+             <label for="token"> Pasword Token: </label>
+             <input type="text" id="token" name="token" minlength="6" required   >
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><br>
+        </div>  
+        <div class="container">
+            <button type="submit" value="submit" name="login"> confirm </button>
+            <button type="reset" value="reset">Resest</button>
+        </div>
+     </form>
+   </center>
+  </body>
+</html>

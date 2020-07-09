@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-
-const userSchema = new Schema({
+//login
+let userSchema = new Schema({
     name: {
         type: String
     },
@@ -21,9 +21,10 @@ const userSchema = new Schema({
         type: String
     }
 });
-const User = mongoose.model('user', userSchema);
+let User1 = mongoose.model('user1', userSchema);
 
-const donationsSchema = new Schema({
+// Donation
+let donationsSchema = new Schema({
     numberOfCloths: {
         type: Number
     },
@@ -32,8 +33,56 @@ const donationsSchema = new Schema({
     },
     phone: {
         type: Number
+    },
+    date: {
+         type : Date,
+         default: Date.now
     }
 });
-const Donation = mongoose.model('donation', donationsSchema);
+let Donation = mongoose.model('donation', donationsSchema);
 
-module.exports = { User, Donation };
+
+/*
+const AdminSchema = new Schema({
+    name: {
+        type: String
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    phone: {
+        type: Number
+    },
+    
+});
+const Admin = mongoose.model('admin', AdminSchema);
+*/
+// registration
+let RegisSchema = new Schema({
+    name: {
+        type: String
+           },
+    email: {
+        type: String
+    },
+    password: {
+        type: String
+        
+    },
+    phone: {
+        type: Number        
+    },
+    address:{
+        type:String
+        
+
+    }
+});
+let Registration = mongoose.model('user', RegisSchema);
+
+module.exports = { User1, Donation ,Registration};

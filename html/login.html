@@ -1,48 +1,55 @@
-<html>
-<head>
-<script>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"style="margin-left:20%; margin-right: 20%;margin-top: 2%;marg">
+       
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="registration">Sign up <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="Shopping">Shoping <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item active">
+                <a class="nav-link" href="/">About us <span class="sr-only">(current)</span></a>
+              </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
 
-</script>
-<title>LOGIN PAGE</title>
-</head>
-<style>
-    body {
-      background-image: url('b3.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size:100% 100%;
-    }
-    </style>
-<body>
-    <center>
-        <h1 >Funds Management System for Social welfare trust </h1>
-        <br>
-        <h3> USER LOGIN  PAGE</h3>
-        <div id="id01" class="modal">
-<form method="POST" action="/login">
-    <div class="container">
-        <br>
-<b> USERNAME:<input type="text" name="email"/><br>
-<br>
-<br>
-PASSWORD:<input type="password" name="password"/><br>
-<br>
-<br>
-<button type="submit" value="submit" name="login">Login</button>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="reset" value="reset"/>
-</b>
-</br>
-</br>
-</br>
-
- <div class="container">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span class="psw">Forgot <a href="#">password?</a></span>
-
-	  <span class="text">&nbsp;&nbsp;&nbsp;<a href="/registration"> New User</a></span>
-</form>
-</div>
-</center>
-</body>
+    <form method ="POST" action= "/login" style="margin-left:30%; margin-right: 30%;margin-top: 5%;margin-bottom:10;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"placeholder="Email">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1"placeholder="password">
+        </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary"><a value="reset"></a>Reset</button>
+        <span class="psw">Forgot <a href="reset">password?</a></span>
+      </div> 
+        
+     </form>
+  </body>
 </html>
